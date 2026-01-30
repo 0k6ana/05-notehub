@@ -3,7 +3,7 @@ import type { AxiosResponse } from "axios"
 import type { Note, Tag } from "../types/note";
 
 const api = axios.create({
-  baseURL:"https://notehub-public.goit.study/api/auth",
+  baseURL: "https://notehub-public.goit.study/api/",
   headers: {
     Authorization: `Bearer ${import.meta.env.VITE_NOTEHUB_TOKEN}`,
   }

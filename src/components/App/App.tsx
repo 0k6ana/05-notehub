@@ -85,7 +85,11 @@ const pageCount = 12;
       </header>
 
       <main className={css.content}>
-        <NoteList notes={data.notes} onDelete={handleDeleteNote} />
+       <NoteList
+         notes={data?.notes ?? []}
+         onDelete={handleDeleteNote}
+/>
+
       </main>
 
       {isModalOpen && (
