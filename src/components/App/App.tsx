@@ -35,7 +35,7 @@ function App() {
   if (isLoading) return <p>Loading...</p>;
   if (isError || !data) return <p>Error loading notes</p>;
 
-  const pageCount = data.pageCount;
+  const pageCount = data.totalPages;
 
   return (
     <div className={css.app}>
