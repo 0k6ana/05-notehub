@@ -3,11 +3,12 @@ import type { AxiosResponse } from "axios"
 import type { Note, Tag } from "../types/note";
 
 const api = axios.create({
-  baseURL:"https://notehub-public.goit.study/api/",
+  baseURL:"https://notehub-public.goit.study/api/auth",
   headers: {
     Authorization: `Bearer ${import.meta.env.VITE_NOTEHUB_TOKEN}`,
   }
 });
+
 export const deleteNote = async (id: string): Promise<void> => {
   await api.delete(`/notes/${id}`);
 };
